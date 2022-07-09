@@ -21,28 +21,30 @@ export default function addBook() {
     }
 
   return (
-    <div>
-        <h1>
-            Add a Book!!!
+    <div className="add-book">
+        <h1 className="add-book-title">
+            Enter your book's data
         </h1>
-        <form onSubmit={postBook}>
-            <input onChange={(event) => setName(event.target.value)} 
+        <form className="add-book-form" onSubmit={postBook}>
+            <input className="add-book-form-input" onChange={(event) => setName(event.target.value)} 
             type="text" 
             placeholder="name" 
             />
-            <input onChange={(event) => setAuthor(event.target.value)} 
+            <input className="add-book-form-input" onChange={(event) => setAuthor(event.target.value)} 
             type="text" 
             placeholder="author" 
             />
-            <input onChange={(event) => setPrice(event.target.value)}  
+            <input className="add-book-form-input" onChange={(event) => setPrice(event.target.value)}  
             type="number" 
             placeholder="price" 
             />
-            <input onChange={(event) => setDescription(event.target.value)} 
-            type="text" 
-            placeholder="description" 
-            />
-            <button>Add Book!!!</button>
+            <textarea
+            className="add-book-form-textarea"
+            onChange={(event) => setDescription(event.target.value)}
+            type="text"
+            placeholder="description"
+        />
+            <button className="add-book-form-button">Add Book!!!</button>
         </form>
     </div>
   )
