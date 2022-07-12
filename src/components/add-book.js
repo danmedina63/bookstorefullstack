@@ -8,7 +8,7 @@ export default function addBook() {
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
 
-    const postBook = () => {
+    const postBook = (event) => {
         axios
             .post("https://dm-bookstore-app.herokuapp.com/book/add",
                 { name: name,
