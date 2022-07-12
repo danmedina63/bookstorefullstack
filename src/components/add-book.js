@@ -10,15 +10,15 @@ export default function addBook() {
 
     const postBook = () => {
         axios
-        .post("https://dm-bookstore-app.herokuapp.com/book/add",
-            { name: name,
-            author: author,
-            price: price,
-            description: description
-        })
-        .then((response) => console.log(response))
-        .catch((error) => console.log(error));
-        event.preventDefault;
+            .post("https://dm-bookstore-app.herokuapp.com/book/add",
+                { name: name,
+                author: author,
+                price: price,
+                description: description
+            })
+            .then((response) => console.log(response))
+            .catch((error) => console.log(error));
+        event.preventDefault();
     }
 
   return (
