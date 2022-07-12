@@ -10,7 +10,7 @@ export default function addBook() {
 
     const postBook = () => {
         axios
-        .post("http://127.0.0.1:5000/book/add",
+        .post("https://dm-bookstore-app.herokuapp.com/book/add",
             { name: name,
             author: author,
             price: price,
@@ -18,6 +18,7 @@ export default function addBook() {
         })
         .then((response) => console.log(response))
         .catch((error) => console.log(error));
+        event.preventDefault;
     }
 
   return (
